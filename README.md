@@ -1,15 +1,15 @@
-# 🚀 Staj Yönetim Sistemi - REST API
+# Staj Yönetim Sistemi - REST API
 
 Bu proje, üniversite öğrencilerinin staj süreçlerini, kurum değerlendirmelerini ve rapor onay mekanizmalarını dijitalleştirmek amacıyla geliştirilmiş modern bir 
 RESTful arka uç (backend) hizmetidir. Sistem, kurumsal düzeyde güvenlik ve modüler bir mimari gözetilerek tasarlanmıştır.
 
-## 🛠 Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 * **Dil & Çatı:** Java, Spring Boot 3.x
 * **Güvenlik:** Spring Security, JWT (JSON Web Token), BCrypt Şifreleme
 * **Veritabanı:** PostgreSQL, Spring Data JPA (Hibernate)
 * **API Belgelendirme:** Swagger / OpenAPI
 
-## ✨ Öne Çıkan Özellikler (Mimari)
+## Öne Çıkan Özellikler (Mimari)
 * **Durumsuz (Stateless) Kimlik Doğrulama:** JWT kullanılarak sunucu belleği yorulmadan güvenli oturum yönetimi sağlanmıştır.
 * **Rol Bazlı Erişim Kontrolü (RBAC):** Sistemde Admin, Kurum Yöneticisi, Akademisyen, Mentör ve Stajyer olmak üzere 5 farklı rol bulunur.
   Kritik API uçları (örn: Kurum ekleme, Rapor onaylama) `hasAnyAuthority` kalkanlarıyla yetkisiz erişime kapatılmıştır.

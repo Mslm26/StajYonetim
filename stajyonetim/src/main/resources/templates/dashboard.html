@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel - Ankara BT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body { background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif; }
+    .sidebar {
+      height: 100vh;
+      background: #2c3e50;
+      color: white;
+      position: fixed;
+      width: 250px;
+      padding-top: 20px;
+    }
+    .sidebar a {
+      color: #bdc3c7;
+      padding: 15px 20px;
+      display: block;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: #34495e;
+      color: #ecf0f1;
+      border-left: 4px solid #3498db;
+    }
+    .content { margin-left: 250px; padding: 30px; }
+    .stat-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .stat-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+    .table-custom { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+    /* Profil bölümü için ince ayar */
+    .profile-section {
+      border-bottom: 1px solid #34495e;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h4 class="text-center mb-4">ANKARA BT</h4>
+
+  <div class="profile-section text-center px-3">
+    <img src="https://ui-avatars.com/api/?name=Müslüm+Sevgi&background=0D8ABC&color=fff" class="rounded-circle mb-2" width="70" alt="Profil">
+    <h6 class="text-white mb-0">Müslüm Sevgi</h6>
+    <small class="text-muted">Admin</small>
+  </div>
+
+  <a href="#" class="active"><i class="fas fa-home me-2"></i> Ana Panel</a>
+  <a href="#"><i class="fas fa-users me-2"></i> Stajyerler</a>
+  <a href="#"><i class="fas fa-project-diagram me-2"></i> Projeler</a>
+  <a href="#"><i class="fas fa-tasks me-2"></i> Görevler</a>
+  <a href="#"><i class="fas fa-book-open me-2"></i> Eğitim Materyalleri</a>
+  <a href="#"><i class="fas fa-file-signature me-2"></i> Staj Defteri</a>
+  <a href="#"><i class="fas fa-comment-dots me-2"></i> Mesajlar <span class="badge bg-danger float-end">3</span></a>
+  <a href="#"><i class="fas fa-cog me-2"></i> Ayarlar</a>
+
+  <div style="position: absolute; bottom: 20px; width: 100%;">
+    <a href="#" class="text-danger"><i class="fas fa-sign-out-alt me-2"></i> Çıkış Yap</a>
+  </div>
+</div>
+
+<div class="content">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>Hoşgeldin, Müslüm 👋</h3>
+    <button class="btn btn-primary"><i class="fas fa-plus me-1"></i> Yeni Görev Ata</button>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="stat-card">
+        <div>
+          <h6 class="text-muted">Aktif Stajyer</h6>
+          <h3>12</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-card">
+        <div>
+          <h6 class="text-muted">Bekleyen Görev</h6>
+          <h3>5</h3>
+        </div>
+        <div class="stat-icon bg-warning"><i class="fas fa-clock"></i></div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-card">
+        <div>
+          <h6 class="text-muted">Tamamlanan</h6>
+          <h3>48</h3>
+        </div>
+        <div class="stat-icon bg-success"><i class="fas fa-check-circle"></i></div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="stat-card">
+        <div>
+          <h6 class="text-muted">Okunmamış Mesaj</h6>
+          <h3>3</h3>
+        </div>
+        <div class="stat-icon bg-info"><i class="fas fa-envelope"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="mb-3">Son Staj Hareketleri</h5>
+  <div class="table-custom p-3">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Stajyer</th>
+        <th>İşlem</th>
+        <th>Durum</th>
+        <th>Tarih</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><img src="https://ui-avatars.com/api/?name=Ali+Veli&background=random" class="rounded-circle me-2" width="30"> Ali Veli</td>
+        <td>Backend API Entegrasyonu</td>
+        <td><span class="badge bg-warning">İnceleniyor</span></td>
+        <td>Bugün, 14:30</td>
+      </tr>
+      <tr>
+        <td><img src="https://ui-avatars.com/api/?name=Ayşe+Yılmaz&background=random" class="rounded-circle me-2" width="30"> Ayşe Yılmaz</td>
+        <td>React Login Sayfası</td>
+        <td><span class="badge bg-success">Tamamlandı</span></td>
+        <td>Dün, 09:15</td>
+      </tr>
+      <tr>
+        <td><img src="https://ui-avatars.com/api/?name=Müslüm+Sevgi&background=random" class="rounded-circle me-2" width="30"> Müslüm Sevgi</td>
+        <td>Veritabanı Kurulumu</td>
+        <td><span class="badge bg-primary">Devam Ediyor</span></td>
+        <td>25 Şub, 15:16</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
